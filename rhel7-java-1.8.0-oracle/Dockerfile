@@ -6,6 +6,8 @@ ENV JAVA_VERSION=${JAVA_VERSION:-1.8.0} \
 
 ENV JAVA_HOME=/usr/lib/jvm/java-${JAVA_VERSION}-${JAVA_TYPE}
 
+RUN yum install -y java-1.8.0-oracle-devel-1.8.0.171-1jpp.2.el6.x86_64.rpm
+
 RUN yum --disablerepo=* \
         --enablerepo=rhel-7-server-rpms \
         --enablerepo=rhel-7-server-extras-rpms \
